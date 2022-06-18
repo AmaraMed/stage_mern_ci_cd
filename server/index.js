@@ -1,12 +1,13 @@
 require("dotenv").config({path : "./config/.env"})
+require('./dbConfig')
 const testRoutes=require('./routes/testRoutes')
 const cors = require('cors');
-
+const UserModel = require('./models/user');
 const bodyParser=require("body-parser")
 const express=require("express");
 const app=express();
 var corsOptions = {
-    origin: 'http://localhost:3000',
+    //origin: 'http://localhost:3000',
     credentials: true,
     'allowedHeaders': ['sessionId', 'Content-Type', 'Authorization'],
     'exposedHeaders': ['sessionId'],
