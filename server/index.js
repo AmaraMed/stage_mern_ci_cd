@@ -7,7 +7,7 @@ const bodyParser=require("body-parser")
 const express=require("express");
 const app=express();
 var corsOptions = {
-    //origin: 'http://localhost:3000',
+    origin: 'http://localhost:3000',
     credentials: true,
     'allowedHeaders': ['sessionId', 'Content-Type', 'Authorization'],
     'exposedHeaders': ['sessionId'],
