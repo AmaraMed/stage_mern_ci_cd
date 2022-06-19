@@ -9,12 +9,12 @@ services:
         ports:
             - "80:80"
 
-    frontend:
+    client:
         image: medamaradocker/mern-client:latest
         environment:
             - CHOKIDAR_USEPOLLING=true
 
-    backend:
+    server:
         image: medamaradocker/mern-server:latest
         env_file:
             - ./server/config/.env
