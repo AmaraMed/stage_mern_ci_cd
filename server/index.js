@@ -7,12 +7,12 @@ const bodyParser=require("body-parser")
 const express=require("express");
 const app=express();
 var corsOptions = {
-    origin: 'http://localhost:3000',
+    //origin: 'http://localhost:3000',
     credentials: true,
     'allowedHeaders': ['sessionId', 'Content-Type', 'Authorization'],
     'exposedHeaders': ['sessionId'],
     'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    'preflightContinue': false
+    //'preflightContinue': false
 }
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
